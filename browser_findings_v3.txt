@@ -1,0 +1,8 @@
+Browser Verification - Senhas VIP com Tempo Individual e Qtd. Acessos
+=====================================================================
+
+Admin Panel - Senhas VIP Tab:
+- Formulário com 5 campos: Senha*, Nome do Cliente, Tempo (min)*, Qtd. Acessos*, + Criar
+- Senha "MULTI3" criada com sucesso: "Grupo Teste" | 15 min | 0/3 usos | timer 14:53 | Disponível
+- Barra de progresso verde visível
+- Confirmado: maxUses=3 e expiresInMinutes=15 foram salvos corretamente no banco

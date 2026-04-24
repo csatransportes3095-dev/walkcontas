@@ -1,0 +1,15 @@
+Browser Verification v7 - Modified field highlighting
+=====================================================
+
+After changing Feature 1 Title from "Atendimento 24h" to "Atendimento 24 Horas":
+- The field now shows "(modificado)" label in yellow ✓
+- The field has a yellow border highlighting ✓
+- The save button next to it turned yellow ✓
+- The SALVAR TUDO button at top is green (pulsing) ✓
+
+Features section clearly visible with all 3 features:
+- Feature 1: Atendimento 24 Horas (modified) / Sempre disponível quando você precisa
+- Feature 2: Resposta Imediata / Suporte ágil via WhatsApp
+- Feature 3: Múltiplas Plataformas / Suporte para Uber, 99 e InDrive
+
+Now need to scroll up and click SALVAR TUDO to test saving all at once.

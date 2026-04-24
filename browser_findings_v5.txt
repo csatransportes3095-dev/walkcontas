@@ -1,0 +1,46 @@
+Browser Investigation - Textos não atualizam
+=============================================
+
+Página do cliente mostra:
+- Header: "WALK CONTAS DE APP" ✅ (correto, vem do banco: site_title = "WALK CONTAS DE APP")
+- Header direita: "PEÇA SEU CUPOM DE DESCONTO." ✅ (correto, vem do banco: site_subtitle)
+- Hero title: "Seja Cliente VIP Grupo de Ajuda no WhatsApp" ✅ (correto, vem do banco)
+- Hero subtitle: "Trabalhamos com APP Uber, InDrive, 99, Carro Ou Moto" ✅ (correto, vem do banco)
+- Feature 1: "Atendimento 24h" / "Sempre disponível quando você precisa" - USANDO DEFAULT (feature1_title está vazio no banco)
+- Feature 2: "Resposta Imediata" / "Suporte ágil via WhatsApp" - USANDO DEFAULT (feature2_title está vazio no banco)
+- Feature 3: "Múltiplas Plataformas" / "Suporte para Uber, 99 e InDrive" - USANDO DEFAULT (feature3_title está vazio no banco)
+- Seção: "FAÇA SEU PEDIDO" / "Soluções completas..." - USANDO DEFAULT (section_order_title está vazio no banco)
+
+DIAGNÓSTICO:
+O código está FUNCIONANDO CORRETAMENTE. Os valores do banco estão sendo usados.
+O problema é que:
+1. site_title = "WALK CONTAS DE APP" está no banco e APARECE corretamente na página
+2. Os features (feature1_title, etc.) estão VAZIOS no banco, então usam o default
+3. O usuário provavelmente editou os campos no admin mas eles não foram salvos, OU
+   ele espera que ao editar "site_title" os features mudem também
+
+POSSÍVEL PROBLEMA:
+- O usuário pode ter digitado novos valores nos campos do admin mas não clicou no botão salvar (ícone de disquete) de cada campo
+- Cada campo tem seu próprio botão de salvar individual
+
+SOLUÇÃO:
+- Adicionar um botão "Salvar Tudo" que salva todos os campos de uma vez
+- Ou verificar se o botão de salvar individual está funcionando corretamente
+
+Footer verification:
+- "WALK CONTAS DE APP" ✅ (uses SITE_TITLE from DB)
+- "Atendimento rápido e eficiente..." ✅ (uses default since footer_description is empty in DB)
+- "Serviços" ✅ (uses default since footer_services_title is empty in DB)
+- "11" ❌ BUG! The footer_contact_title was saved as "11" instead of "Contato"
+  - The user probably typed "11" in the contact title field by mistake
+- Copyright: "@ 2026 WALK CONTAS DE APP, TODOS DIREITOS RESERVADO." ✅ (from DB)
+
+KEY FINDING: The admin save IS working. The values ARE being saved and displayed.
+The issue is likely:
+1. User doesn't realize each field has its own save button
+2. User may have typed wrong values in some fields
+3. The footer_contact_title shows "11" which was saved by user
+
+REAL PROBLEM TO FIX:
+- The admin UX needs a "Salvar Tudo" button instead of individual save buttons
+- This is confusing the user - they think changes aren't saving

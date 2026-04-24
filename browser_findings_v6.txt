@@ -1,0 +1,41 @@
+Browser Verification v6 - SiteSettingsManager Rewrite
+======================================================
+
+Admin Configurações Tab:
+1. SALVAR TUDO button visible at top right - GREEN
+2. Sections organized: "Cabeçalho & Hero" section visible
+3. All fields now show their current values (not empty):
+   - Título do Site: "WALK CONTAS DE APP" ✓
+   - Subtítulo: "PEÇA SEU CUPOM DE DESCONTO." ✓
+   - Título do Hero: "Seja Cliente VIP <span...> Grupo de Ajuda</span> no WhatsApp" ✓
+   - Subtítulo do Hero: "Trabalhamos com APP Uber, InDrive, 99, Carro Ou Moto" ✓
+   - URL do Vídeo Hero: shows video preview ✓
+
+Need to scroll down to see:
+- Features section (Atendimento 24h, etc.)
+- Seção Pedidos
+- WhatsApp & Promoção
+- Rodapé
+
+Features section visible with defaults:
+   - Feature 1 Título: "Atendimento 24h" ✓
+   - Feature 1 Desc: "Sempre disponível quando você precisa" ✓
+   - Feature 2 Título: "Resposta Imediata" ✓
+   - Feature 2 Desc: "Suporte ágil via WhatsApp" ✓
+   - Feature 3 Título: "Múltiplas Plataformas" ✓
+   - Feature 3 Desc: "Suporte para Uber, 99 e InDrive" ✓
+
+Seção Pedidos:
+   - Título: "FAÇA SEU PEDIDO" ✓
+   - Subtítulo: "Soluções completas para motoristas de aplicativos" ✓
+
+Rodapé:
+   - Descrição: "Atendimento rápido e eficiente para motoristas de aplicativos." ✓
+   - Título Serviços: "Serviços" ✓
+   - Título Contato: "11" (this was saved wrong by user - needs to be "Contato")
+   - Copyright: "@ 2026 WALK CONTAS DE APP, TODOS DIREITOS RESERVADO." ✓
+
+SALVAR TODAS AS CONFIGURAÇÕES button at bottom ✓
+
+CONCLUSION: The admin now shows all fields with their values (from DB or defaults).
+User can edit and click SALVAR TUDO to save everything at once.

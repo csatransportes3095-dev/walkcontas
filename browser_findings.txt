@@ -1,0 +1,40 @@
+Browser verification of Home page (2026-04-21):
+
+1. Header: Shows "WALK CONTAS DE APP" - this is the site_title from DB ✅
+2. Header right: Shows "PEÇA SEU CUPOM DE DESCONTO" - promo button from DB ✅
+3. Hero Title: "Seja Ciente VIP Grupo de Ajunda no WhatsApp" - from DB hero_title ✅
+   - "Grupo de Ajunda" is rendered in a different color (HTML span support working)
+4. Hero Subtitle: "Suporte direto para motoristas de Uber, 99 e InDrive. Respostas Rapidas, Grupo de ajuda" - from DB hero_subtitle ✅
+5. Hero Image: WALK AJUDA image with stars visible ✅
+6. FAÇA SEU PEDIDO section visible ✅
+7. Cards visible: CONTA UBER, CONTA 99, CONTA INDRIVE, EDIÇÃO DOC CARRO, UBER TAXI, RECUPERAÇÃO DE FOTO ✅
+
+Need to scroll down to check:
+- Promo text (if promo_active is true in DB)
+- Footer with FOOTER_HOURS
+
+After scrolling down:
+8. All 6 cards visible: CONTA UBER, CONTA 99, CONTA INDRIVE, EDIÇÃO DOC CARRO, UBER TAXI, RECUPERAÇÃO DE FOTO ✅
+9. Each card shows guarantee text from DB ✅
+10. Footer shows "WALK CONTAS DE APP" (site_title from DB) ✅
+11. Footer shows "WhatsApp: (11) 97830-7371" (whatsapp_display from DB) ✅
+12. Footer shows "Disponível 24H" (footer_hours from DB) ✅
+13. Footer shows all service names dynamically ✅
+14. Footer shows "© 2026 WALK CONTAS DE APP. Todos os direitos reservados." ✅
+
+NOTE: Promo text was NOT visible in the FAÇA SEU PEDIDO section. Need to check if promo_active is set to 'true' in the database.
+
+Promo check: promo_active is 'false' in DB, so promo text correctly NOT showing. ✅
+When admin sets promo_active to 'true', the promo text will appear below FAÇA SEU PEDIDO.
+
+All admin settings are now correctly applied to the Home page:
+- site_title ✅
+- site_subtitle ✅  
+- hero_title (with HTML support) ✅
+- hero_subtitle ✅
+- hero_video_url ✅
+- whatsapp_number ✅
+- whatsapp_display ✅
+- footer_hours ✅
+- promo_active ✅ (conditionally shows)
+- promo_text ✅ (ready when activated)

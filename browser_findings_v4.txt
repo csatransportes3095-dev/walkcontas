@@ -1,0 +1,23 @@
+Browser Verification - Textos Editáveis no Admin
+=================================================
+
+Admin Panel > Configurações tab:
+- All new fields are visible and editable:
+  - Feature 1 - Título (empty, will use default "Atendimento 24h")
+  - Feature 1 - Descrição (empty, will use default)
+  - Feature 2 - Título (empty)
+  - Feature 2 - Descrição (empty)
+  - Feature 3 - Título (empty)
+  - Feature 3 - Descrição (empty)
+  - Título Seção Pedidos (empty, will use default "FAÇA SEU PEDIDO")
+  - Subtítulo Seção Pedidos (empty)
+  - Rodapé - Descrição (textarea, empty)
+  - Rodapé - Título Serviços (empty)
+  - Rodapé - Título Contato (empty)
+  - Rodapé - Copyright (empty)
+
+All fields show correct labels and descriptions.
+The admin can now edit all these texts and save them individually.
+Home.tsx uses fallback defaults when values are empty/not set.
+
+Status: WORKING CORRECTLY

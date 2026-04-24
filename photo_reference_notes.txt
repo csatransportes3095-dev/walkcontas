@@ -1,0 +1,14 @@
+Referências visuais para foto de perfil de motorista:
+- Imagem 1: Perfil de motorista Uber com foto circular, nome "Lucas", Honda Civic ABC-1234
+- Imagem 7: Tela do Uber mostrando "Tire uma foto do seu rosto" com exemplo de selfie frontal
+
+Para o aviso de foto de perfil, vou criar um aviso textual com ícone descrevendo:
+- Foto frontal do rosto
+- Boa iluminação
+- Sem óculos escuros
+- Fundo neutro
+
+Para o aviso de veículo 2016+:
+- Aviso em amarelo/laranja
+- Texto: "Veículo deve ser a partir de 2016"
+- Somente para: Conta Uber, Conta 99, Conta InDrive, UBER TAXI

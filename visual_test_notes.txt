@@ -1,0 +1,36 @@
+Visual Test Notes - Formulário Unificado
+=========================================
+
+O formulário de cadastro unificado está funcionando corretamente:
+
+1. QUEM TE INDICOU? (seção roxa)
+   - Nome de quem indicou
+   - Telefone de quem indicou
+
+2. SEUS DADOS (seção azul)
+   - Nome Completo
+   - Telefone
+   - Cidade
+
+3. RESUMO DO PEDIDO (seção verde)
+   - Serviço: Conta Uber
+   - Opção: Nome Aleatório
+   - Valor: R$ 400,00
+   - Cupom de Desconto (opcional) com campo e botão Aplicar
+
+4. PAGAMENTO VIA PIX (seção verde-azul)
+   - VALOR A PAGAR: R$ 400,00 (destaque grande)
+   - Chave PIX (Telefone): 11915193551
+   - Adiel Cardeal dos Santos
+   - 99Pay
+   - Botão COPIAR CHAVE PIX
+
+5. ENVIE O COMPROVANTE DE PAGAMENTO (seção amarela)
+   - Área de upload com ícone
+   - "Clique para enviar comprovante"
+   - JPG, PNG - Máx 5MB
+
+6. Botão ENVIE O COMPROVANTE PARA FINALIZAR (cinza/desabilitado até enviar comprovante)
+7. Botão Voltar
+
+Tudo na mesma página, sem steps separados. Layout correto!

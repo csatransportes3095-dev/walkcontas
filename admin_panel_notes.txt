@@ -1,0 +1,6 @@
+Painel Admin - Observações:
+1. O painel está funcionando e mostrando as senhas VIP
+2. Os inputs de Código e Nome do Cliente parecem ter fundo escuro (não branco como deveria)
+3. O botão "Gerar" está com fundo verde mas o texto parece cortado
+4. A tabela de senhas VIP está mostrando 2 senhas: VIP-PKRLUQ (Priscila, Usada) e VIP-YUKQNN (5015, Ativa)
+5. Os inputs NÃO estão com fundo branco - o CSS pode estar sendo sobrescrito pelo tema dark

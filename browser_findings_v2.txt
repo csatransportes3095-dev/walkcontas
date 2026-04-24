@@ -1,0 +1,54 @@
+Browser Verification - Admin Cupons Tab
+=========================================
+- Cupons tab now shows: "Crie cupons de desconto com valor fixo (R$) ou percentual (%)"
+- Form has 4 fields: Código, Tipo de Desconto (dropdown), Desconto (%), Criar button
+- Dropdown has: "Percentual (%)" and "Valor Fixo (R$)" options
+- Default is Percentual (%) with value 10
+- Working correctly!
+
+Next: Test switching to "Valor Fixo (R$)" and verify the label changes
+
+Verification - Valor Fixo (R$) mode:
+- Select changed to "Valor Fixo (R$)" successfully
+- Label changed from "Desconto (%)" to "Desconto (R$)" 
+- Placeholder changed from "Ex: 10" to "Ex: 50.00"
+- Helper text shows: "Valor em reais (ex: 50 = R$ 50,00)"
+- Value changed to 50 (default for fixed type)
+- WORKING CORRECTLY!
+
+Next: Check Senhas VIP tab for timer display
+
+Verification - Senhas VIP Admin Tab:
+- Shows "Tempo de expiração: 30 minutos" in blue/primary color
+- Existing password "2026" for "LONDRINA" shows "Expirada" status in red
+- The bar is not visible for expired passwords (correct behavior)
+- Delete button available
+- Need to create a new password to test the live countdown
+
+Next: Create a test password to verify countdown
+
+Verification - Senhas VIP Timer in Admin:
+- New password "TESTVIP" created for "Teste Timer"
+- Shows countdown timer: "29:52" with clock icon in green color
+- Shows "Disponível" status badge in green
+- GREEN progress bar visible at the bottom of the card (full width since just created)
+- Old password "2026" for "LONDRINA" shows "Expirada" status in red (no bar)
+- WORKING PERFECTLY!
+
+All three features verified in browser:
+1. Cupons: Percentual (%) and Valor Fixo (R$) dropdown working
+2. Senhas VIP Admin: Timer countdown + green bar visible
+3. Next: Need to verify client-side timer (PasswordGate)
+
+Verification - Client Timer (PasswordGate):
+- VIP password "TESTVIP" accepted successfully
+- Timer bar visible at the TOP of the page (fixed position)
+- Shows "29:54 restante" with timer icon in GREEN color
+- Progress bar is GREEN and nearly full (just started)
+- The main content (Home page) is visible below the timer bar
+- ALL THREE FEATURES WORKING CORRECTLY!
+
+Summary:
+1. Cupons: Fixed (R$) and Percentage (%) both working in admin
+2. Admin VIP Timer: Shows countdown + color bar for each password
+3. Client Timer: Fixed bar at top with countdown, green→red transition
